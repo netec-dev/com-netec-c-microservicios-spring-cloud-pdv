@@ -1,0 +1,20 @@
+server:
+  port: 9001
+#
+servicio-de-cuentas:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9002
+#
+servicio-de-clientes:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9003
+#
+servicio-de-productos:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9004

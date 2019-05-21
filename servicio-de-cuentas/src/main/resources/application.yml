@@ -1,0 +1,4 @@
+# Puerto del servicio-de-cuentas
+server:
+  port: 9002
+  

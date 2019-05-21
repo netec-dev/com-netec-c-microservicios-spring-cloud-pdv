@@ -1,0 +1,10 @@
+# Puerto servicio-de-clientes
+server:
+  port: 9003
+  
+servicio-de-cuentas:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9002
+  

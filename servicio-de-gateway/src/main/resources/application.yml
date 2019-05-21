@@ -1,0 +1,18 @@
+server:
+  port: ${PORT:4001}
+  
+zuul:
+  ignoredServices: '*'
+  routes:
+    cuenta:
+      path: /cuenta/**
+      url: http://localhost:9002
+    cliente:
+      path: /cliente/**
+      url: http://localhost:9003
+    pedido:
+      path: /pedido/**
+      url: http://localhost:9001
+    producto:
+      path: /producto/**
+      url: http://localhost:9004

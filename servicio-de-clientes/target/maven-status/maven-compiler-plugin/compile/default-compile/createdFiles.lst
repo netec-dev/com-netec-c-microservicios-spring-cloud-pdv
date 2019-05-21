@@ -1,0 +1,6 @@
+com\netec\c\microservicios\spring\cloud\pdv\cliente\model\Cuenta.class
+com\netec\c\microservicios\spring\cloud\pdv\cliente\model\Cliente.class
+com\netec\c\microservicios\spring\cloud\pdv\cliente\repository\ClienteRepository.class
+com\netec\c\microservicios\spring\cloud\pdv\cliente\ClienteApp.class
+com\netec\c\microservicios\spring\cloud\pdv\cliente\controller\ClienteController.class
+com\netec\c\microservicios\spring\cloud\pdv\cliente\model\TipoDeCliente.class
