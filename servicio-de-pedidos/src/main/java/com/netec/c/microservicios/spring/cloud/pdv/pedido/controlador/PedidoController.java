@@ -25,7 +25,7 @@ public class PedidoController {
 	RestTemplate template;
 	
 	@PostMapping
-	public Pedido prepare(@RequestBody Pedido pedido) {
+	public Pedido preparar(@RequestBody Pedido pedido) {
 		int precio = 0;
 		Producto[] productos = template.postForObject("http://servicio-de-productos/ids", pedido.getIdsProductos(), Producto[].class);
 		Cliente clientes = template.getForObject("http://servicio-de-clientes/conCuentas/{id}", Cliente.class, pedido.getIdCliente());
@@ -44,7 +44,7 @@ public class PedidoController {
 	}
 	
 	@PutMapping("/{id}")
-	public Pedido accept(@PathVariable Long id) {
+	public Pedido aceptar(@PathVariable Long id) {
 		final Pedido pedido = pedidoRepo.findById(id);
 		template.put("http://servicio-de-clientes/retiro/{id}/{cantidad}", null, pedido.getIdCuenta(), pedido.getPrecio());
 		pedido.setEstatusPedido(EstatusDePedido.HECHO);
