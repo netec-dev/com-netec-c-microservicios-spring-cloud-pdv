@@ -1,21 +1,0 @@
-#
-spring:  
-  application:
-    name: servicio-de-clientes
-# Puerto servicio-de-clientes
-server:
-  port: ${PORT:9030}
-#
-#eureka:#  client:#    service-url:#      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}
-
-servicio-de-cuentas:
-  ribbon:
-    eureka:
-      enabled: false
-    listOfServers: servicio-de-cuentas:9021, servicio-de-cuentas:9022,servicio-de-cuentas:9023
-#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
-#
-logging:
-  level:
-   com.netflix: DEBUG
-   org.springframework.cloud: DEBUG

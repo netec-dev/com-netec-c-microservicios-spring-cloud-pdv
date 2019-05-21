@@ -2,10 +2,7 @@ package com.netec.c.microservicios.spring.cloud.pdv.pedido;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClients;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClients;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +18,6 @@ import com.netec.c.microservicios.spring.cloud.pdv.pedido.repo.PedidoRepository;
 	@RibbonClient(name = "servicio-de-clientes"),
 	@RibbonClient(name = "servicio-de-productos")
 })
-@EnableDiscoveryClient
 public class PedidoApp {
 
 	@LoadBalanced

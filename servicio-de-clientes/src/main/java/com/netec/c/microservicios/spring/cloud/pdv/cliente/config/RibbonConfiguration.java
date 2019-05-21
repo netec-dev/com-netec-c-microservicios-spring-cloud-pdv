@@ -12,6 +12,8 @@ public class RibbonConfiguration {
 	@Bean
 	public IRule ribbonRule() {
 		return new WeightedResponseTimeRule();
+//		return new AvailabilityFilteringRule();
+//		return new BestAvailableRule();
 	}
 
 }

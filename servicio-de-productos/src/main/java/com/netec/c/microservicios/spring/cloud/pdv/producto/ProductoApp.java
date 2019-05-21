@@ -2,7 +2,6 @@ package com.netec.c.microservicios.spring.cloud.pdv.producto;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClients;
@@ -13,7 +12,6 @@ import com.netec.c.microservicios.spring.cloud.pdv.producto.model.Producto;
 import com.netec.c.microservicios.spring.cloud.pdv.producto.repository.ProductoRepository;
 
 @SpringBootApplication
-@EnableDiscoveryClient
 @RibbonClients({
 	@RibbonClient(name = "servicio-de-cuentas"),
 	@RibbonClient(name = "servicio-de-clientes"),

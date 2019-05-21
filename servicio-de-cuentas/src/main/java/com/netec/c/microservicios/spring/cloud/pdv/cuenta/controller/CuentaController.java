@@ -42,9 +42,9 @@ public class CuentaController {
 		return cuentaRepo.findById(id);
 	}
 
-	@GetMapping("/cliente/{clienteId}")
-	public List<Cuenta> obtenCuentasPorIdCliente(@PathVariable("clienteId") Long clienteId) {
-		return cuentaRepo.findByCustomer(clienteId);
+	@GetMapping("/cliente/{idCliente}")
+	public List<Cuenta> obtenCuentasPorIdCliente(@PathVariable("idCliente") Long idCliente) {
+		return cuentaRepo.findByCustomer(idCliente);
 	}
 
 	@PostMapping("/ids")

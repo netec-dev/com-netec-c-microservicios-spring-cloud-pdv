@@ -7,15 +7,22 @@ server:
   port: ${PORT:9030}
 #
 #eureka:#  client:#    service-url:#      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}
-
+#eureka:#  client:#    register-with-eureka: false
+#    fetch-registry: false
+    
 servicio-de-cuentas:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: servicio-de-cuentas:9021, servicio-de-cuentas:9022,servicio-de-cuentas:9023
+    listOfServers: localhost:9020,localhost:9021,localhost:9022
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+    #listOfServers: localhost:${SERVER.PORT}
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
 #
-logging:
-  level:
-   com.netflix: DEBUG
-   org.springframework.cloud: DEBUG
+#logging:
+#  level:
+#   com.netflix: DEBUG
+#   org.springframework.cloud: DEBUG
+#   com.netflix.eureka: OFF
+#   com.netflix.discovery: OFF
+    

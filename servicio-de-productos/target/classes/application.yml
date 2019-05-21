@@ -1,8 +1,0 @@
-#
-spring:  
-  application:
-    name: servicio-de-productos
-# Puerto servicio-de-productos
-server:
-  port: ${PORT:9040}
-#

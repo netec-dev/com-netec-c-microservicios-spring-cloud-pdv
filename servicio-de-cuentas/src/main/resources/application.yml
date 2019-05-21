@@ -10,3 +10,11 @@ server:
 #  client:
 #    service-url:
 #      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}
+
+logging:
+  level:
+   com.netflix: DEBUG
+   org.springframework.cloud: DEBUG
+   com.netflix.eureka: OFF
+   com.netflix.discovery: OFF
+    
