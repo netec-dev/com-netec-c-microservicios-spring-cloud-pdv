@@ -1,20 +1,30 @@
+
+spring:  
+  application:
+    name: servicio-de-pedidos
+
 server:
-  port: 9001
+  port: ${PORT:9001}  
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:3001/eureka/}  
 #
-servicio-de-cuentas:
-  ribbon:
-    eureka:
-      enabled: false
-    listOfServers: localhost:9002
-#
-servicio-de-clientes:
-  ribbon:
-    eureka:
-      enabled: false
-    listOfServers: localhost:9003
-#
-servicio-de-productos:
-  ribbon:
-    eureka:
-      enabled: false
-    listOfServers: localhost:9004
+#servicio-de-cuentas:
+#  ribbon:
+#    eureka:
+#      enabled: false
+#    listOfServers: localhost:9002
+##
+#servicio-de-clientes:
+#  ribbon:
+#    eureka:
+#      enabled: false
+#    listOfServers: localhost:9003
+##
+#servicio-de-productos:
+#  ribbon:
+#    eureka:
+#      enabled: false
+#    listOfServers: localhost:9004
