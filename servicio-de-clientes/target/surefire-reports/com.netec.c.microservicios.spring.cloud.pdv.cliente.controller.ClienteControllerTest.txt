@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.netec.c.microservicios.spring.cloud.pdv.cliente.controller.ClienteControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.312 s - in com.netec.c.microservicios.spring.cloud.pdv.cliente.controller.ClienteControllerTest
