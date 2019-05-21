@@ -1,10 +1,9 @@
+#
+spring:  
+  application:
+    name: servicio-de-clientes
 # Puerto servicio-de-clientes
 server:
-  port: 9003
-  
-servicio-de-cuentas:
-  ribbon:
-    eureka:
-      enabled: false
-    listOfServers: localhost:9002
-  
+  port: ${PORT:9030}
+#
+eureka:  client:    service-url:      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}

@@ -4,12 +4,12 @@ spring:
     name: servicio-de-pedidos
 
 server:
-  port: ${PORT:9001}  
+  port: ${PORT:9010}  
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:3001/eureka/}  
+      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}  
 #
 #servicio-de-cuentas:
 #  ribbon:

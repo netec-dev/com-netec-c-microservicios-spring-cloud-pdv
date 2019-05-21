@@ -1,4 +1,12 @@
 # Puerto del servicio-de-cuentas
+spring:  
+  application:
+    name: servicio-de-cuentas
+# Puerto servicio-de-cuentas
 server:
-  port: 9002
-  
+  port: ${PORT:9020}
+#
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}

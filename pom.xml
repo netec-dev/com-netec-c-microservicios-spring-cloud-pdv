@@ -47,9 +47,9 @@
 	<modules>
 		<module>servicio-de-pedidos</module>
 		<module>servicio-de-productos</module>
-		<module>servicio-de-gateway</module>
 		<module>servicio-de-clientes</module>
 		<module>servicio-de-cuentas</module>
+		<module>servicio-eureka</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
