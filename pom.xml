@@ -20,8 +20,6 @@
 	</properties>
 
 	<dependencies>
-		
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -49,7 +47,6 @@
 		<module>servicio-de-productos</module>
 		<module>servicio-de-clientes</module>
 		<module>servicio-de-cuentas</module>
-		<module>servicio-eureka</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>

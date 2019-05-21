@@ -4,16 +4,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+import com.netec.c.microservicios.spring.cloud.pdv.cliente.config.RibbonConfiguration;
 import com.netec.c.microservicios.spring.cloud.pdv.cliente.model.Cliente;
 import com.netec.c.microservicios.spring.cloud.pdv.cliente.model.TipoDeCliente;
 import com.netec.c.microservicios.spring.cloud.pdv.cliente.repository.ClienteRepository;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@RibbonClient(name = "servicio-de-cuentas")
+@RibbonClient(name = "servicio-de-cuentas", configuration = RibbonConfiguration.class)
 public class ClienteApp {
 
 	@LoadBalanced

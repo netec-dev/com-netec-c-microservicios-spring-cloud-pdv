@@ -6,25 +6,21 @@ spring:
 server:
   port: ${PORT:9010}  
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}  
+
+servicio-de-cuentas:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9020
 #
-#servicio-de-cuentas:
-#  ribbon:
-#    eureka:
-#      enabled: false
-#    listOfServers: localhost:9002
-##
-#servicio-de-clientes:
-#  ribbon:
-#    eureka:
-#      enabled: false
-#    listOfServers: localhost:9003
-##
-#servicio-de-productos:
-#  ribbon:
-#    eureka:
-#      enabled: false
-#    listOfServers: localhost:9004
+servicio-de-clientes:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9030
+#
+servicio-de-productos:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:9040

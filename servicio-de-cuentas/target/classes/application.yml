@@ -6,7 +6,7 @@ spring:
 server:
   port: ${PORT:9020}
 #
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: ${EUREKA_URL:http://localhost:3010/eureka/}
