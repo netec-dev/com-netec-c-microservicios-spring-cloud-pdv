@@ -1,0 +1,29 @@
+server:  
+  port: ${PORT:4000}
+
+spring:  
+  application:
+    name: servicio-de-gateway
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:3000/eureka/
+    registerWithEureka: true
+    
+zuul:
+  prefix: /api
+  routes:
+    servicio-de-cuentas:
+      path: /cuenta/**
+    servicio-de-clientes:
+      path: /cliente/**
+    servicio-de-pedidos:
+      path: /pedido/**
+    servicio-de-productos:
+      path: /producto/**
+
+# Deprecated
+#management:
+#  security:
+#    enabled: false

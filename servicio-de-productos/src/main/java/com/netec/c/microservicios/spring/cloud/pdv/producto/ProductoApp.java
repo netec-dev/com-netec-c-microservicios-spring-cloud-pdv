@@ -2,21 +2,17 @@ package com.netec.c.microservicios.spring.cloud.pdv.producto;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
 import com.netec.c.microservicios.spring.cloud.pdv.producto.model.Producto;
 import com.netec.c.microservicios.spring.cloud.pdv.producto.repository.ProductoRepository;
 
 @SpringBootApplication
-@RibbonClients({
-	@RibbonClient(name = "servicio-de-cuentas"),
-	@RibbonClient(name = "servicio-de-clientes"),
-	@RibbonClient(name = "servicio-de-productos")
-})
+@EnableDiscoveryClient
 public class ProductoApp {
 
 	@LoadBalanced
@@ -44,5 +40,20 @@ public class ProductoApp {
 		productoRepo.add(new Producto("Producto 10", 1000));
 		return productoRepo;
 	}
+	
+	@Bean
+	public CommonsRequestLoggingFilter requestLoggingFilter() {
+	    CommonsRequestLoggingFilter loggingFilter = new CommonsRequestLoggingFilter();
+	    loggingFilter.setIncludePayload(true);
+	    loggingFilter.setIncludeHeaders(true);
+	    loggingFilter.setMaxPayloadLength(1000);
+	    loggingFilter.setAfterMessagePrefix("REQ:");
+	    return loggingFilter;
+	}
+	
+//	@Bean
+//	public Sampler defaultSampler() {
+//		return new AlwaysSampler();
+//	}
 
 }

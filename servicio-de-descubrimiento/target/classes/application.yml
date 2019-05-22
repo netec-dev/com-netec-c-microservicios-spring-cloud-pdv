@@ -1,0 +1,11 @@
+spring:  
+  application:
+    name: servicio-de-descubrimiento
+
+server:  
+  port: ${PORT:3000}
+      
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

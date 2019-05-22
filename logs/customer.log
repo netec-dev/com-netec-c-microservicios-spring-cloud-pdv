@@ -1,0 +1,39 @@
+21:50:24.788 INFO  Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9532d06c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:50:29.327 INFO  The following profiles are active: zona1
+21:50:30.100 WARN  Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+21:50:30.525 INFO  BeanFactory id=1f79fd6b-de48-3d50-ad2d-3246455fb532
+21:50:30.832 INFO  Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9532d06c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:50:31.187 INFO  Tomcat initialized with port(s): 9030 (http)
+21:50:31.203 INFO  Initializing ProtocolHandler ["http-nio-9030"]
+21:50:31.212 INFO  Starting service [Tomcat]
+21:50:31.212 INFO  Starting Servlet engine: [Apache Tomcat/9.0.19]
+21:50:31.306 INFO  Initializing Spring embedded WebApplicationContext
+21:50:31.306 INFO  Root WebApplicationContext: initialization completed in 1964 ms
+21:50:31.489 WARN  No URLs will be polled as dynamic configuration sources.
+21:50:31.489 INFO  To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+21:50:31.506 INFO  DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7502291e
+21:50:32.882 DEBUG Filter 'requestLoggingFilter' configured for use
+21:50:33.127 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clienteController': Unsatisfied dependency expressed through field 'template'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+21:50:33.797 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eurekaRibbonClientConfiguration': Unsatisfied dependency expressed through field 'eurekaConfig'; nested exception is org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaInstanceConfigBean': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+21:50:33.803 INFO  Stopping service [Tomcat]
+21:50:33.823 INFO  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+21:50:34.097 ERROR 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field template in com.netec.c.microservicios.spring.cloud.pdv.cliente.controller.ClienteController required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+

@@ -1,0 +1,7 @@
+com\netec\c\microservicios\spring\cloud\pdv\gateway\fallback\AccountFallbackProvider$1.class
+com\netec\c\microservicios\spring\cloud\pdv\gateway\fallback\AccountFallbackProvider.class
+com\netec\c\microservicios\spring\cloud\pdv\gateway\fallback\AccountFallbackProvider$2.class
+com\netec\c\microservicios\spring\cloud\pdv\gateway\GatewayApp.class
+com\netec\c\microservicios\spring\cloud\pdv\gateway\fallback\AccountFallbackProvider$3.class
+com\netec\c\microservicios\spring\cloud\pdv\gateway\fallback\response\AccountFallbackResponse.class
+com\netec\c\microservicios\spring\cloud\pdv\gateway\filter\AddResponseIDHeaderFilter.class

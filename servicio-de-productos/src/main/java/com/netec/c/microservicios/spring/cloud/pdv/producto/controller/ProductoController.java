@@ -19,30 +19,31 @@ public class ProductoController {
 
 	@Autowired
 	ProductoRepository repository;
-	
+
 	@PostMapping
 	public Producto altaProducto(@RequestBody Producto product) {
 		return repository.add(product);
 	}
-	
+
 	@PutMapping
 	public Producto actualizaProducto(@RequestBody Producto product) {
 		return repository.update(product);
 	}
-	
+
 	@GetMapping("/{id}")
 	public Producto obtenProductoPorId(@PathVariable("id") Long id) {
 		return repository.findById(id);
 	}
-	
+
 	@PostMapping("/ids")
 	public List<Producto> obtenProductosPorIds(@RequestBody List<Long> ids) {
-		return repository.find(ids);
+		List<Producto> productos = repository.find(ids);
+		return productos;
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public void eliminaProducto(@PathVariable("id") Long id) {
 		repository.delete(id);
 	}
-	
+
 }

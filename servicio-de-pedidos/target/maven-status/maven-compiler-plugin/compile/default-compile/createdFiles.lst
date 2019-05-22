@@ -1,0 +1,13 @@
+com\netec\c\microservicios\spring\cloud\pdv\pedido\client\ClienteCliente.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\client\CuentaCliente.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\modelo\Producto.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\controlador\PedidoController.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\modelo\Cliente.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\modelo\EstatusDePedido.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\client\ProductoCliente.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\controlador\PedidoController$1.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\PedidoApp.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\modelo\Pedido.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\modelo\TipoDeCliente.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\repo\PedidoRepository.class
+com\netec\c\microservicios\spring\cloud\pdv\pedido\modelo\Cuenta.class

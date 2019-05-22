@@ -47,6 +47,8 @@
 		<module>servicio-de-productos</module>
 		<module>servicio-de-clientes</module>
 		<module>servicio-de-cuentas</module>
+		<module>servicio-de-descubrimiento</module>
+		<module>servicio-de-gateway</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
