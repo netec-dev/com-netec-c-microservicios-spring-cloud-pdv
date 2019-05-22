@@ -1,3 +1,4 @@
+com\netec\c\microservicios\spring\cloud\pdv\cuenta\contrato\ServicioCuenta.class
 com\netec\c\microservicios\spring\cloud\pdv\cuenta\controller\CuentaController.class
 com\netec\c\microservicios\spring\cloud\pdv\cuenta\repository\CuentaRepository.class
 com\netec\c\microservicios\spring\cloud\pdv\cuenta\CuentaApp.class

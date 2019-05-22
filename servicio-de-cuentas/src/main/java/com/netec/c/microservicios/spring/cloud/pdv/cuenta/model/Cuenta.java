@@ -49,7 +49,4 @@ public class Cuenta {
 		this.idCliente = idCliente;
 	}
 
-
-
-
 }

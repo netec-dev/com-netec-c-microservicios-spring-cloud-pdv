@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.netec.c.microservicios.spring.cloud.pdv.cliente.CuentaCliente;
 import com.netec.c.microservicios.spring.cloud.pdv.cliente.model.Cliente;
-import com.netec.c.microservicios.spring.cloud.pdv.cliente.model.Cuenta;
 import com.netec.c.microservicios.spring.cloud.pdv.cliente.repository.ClienteRepository;
+import com.netec.c.microservicios.spring.cloud.pdv.cuenta.model.Cuenta;
+
 
 @RestController
 public class ClienteController {
@@ -42,7 +43,6 @@ public class ClienteController {
 
 	@GetMapping("/conCuentas/{idCliente}")
 	public Cliente obtenClientePorIdConCuentas(@PathVariable("idCliente") Long idCliente) {
-		System.out.println("-----------------------------------");
 		List<Cuenta> accounts = accountClient.findByCustomer(idCliente);
 		Cliente c = clienteRepo.findById(idCliente);
 		c.setCuentas(accounts);

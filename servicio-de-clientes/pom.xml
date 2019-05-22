@@ -11,8 +11,12 @@
 	<name>servicio-de-clientes</name>
 	<description>Servicio de Clientes</description>
 
-<dependencies>
-
+	<dependencies>
+		<dependency>
+			<groupId>com.netec.c.microservicios</groupId>
+			<artifactId>servicio-de-cuentas</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -22,19 +26,10 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>net.logstash.logback</groupId>
-			<artifactId>logstash-logback-encoder</artifactId>
-			<version>4.11</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-</dependencies>
+	</dependencies>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

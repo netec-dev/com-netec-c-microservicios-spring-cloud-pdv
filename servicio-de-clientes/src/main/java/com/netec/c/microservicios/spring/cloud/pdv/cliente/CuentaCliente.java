@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.netec.c.microservicios.spring.cloud.pdv.cliente.model.Cuenta;
+import com.netec.c.microservicios.spring.cloud.pdv.cuenta.model.Cuenta;
 
 
 @FeignClient(name = "servicio-de-cuentas")

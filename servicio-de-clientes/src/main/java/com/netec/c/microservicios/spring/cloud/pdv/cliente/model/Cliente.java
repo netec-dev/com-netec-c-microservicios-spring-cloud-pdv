@@ -3,6 +3,8 @@ package com.netec.c.microservicios.spring.cloud.pdv.cliente.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.netec.c.microservicios.spring.cloud.pdv.cuenta.model.Cuenta;
+
 public class Cliente {
 
 	private Long id;

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.netec.c.microservicios.spring.cloud.pdv.pedido.modelo.Producto;
+import com.netec.c.microservicios.spring.cloud.pdv.producto.model.Producto;
 
 @FeignClient(name = "servicio-de-productos")
 public interface ProductoCliente {
